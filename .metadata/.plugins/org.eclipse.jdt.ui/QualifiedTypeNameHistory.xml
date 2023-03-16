@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.xworkz.application.dto.WeaponDTO"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.util.WeaponUtil"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.constant.Brand"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.constant.TypeAndWeight"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.constant.Colore"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.dto.HeadphoneDTO"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.dto.Brand"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.dto.TypeAndWeight"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.dto.Colore"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.service.HeadphoneService"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.service.HeadphoneServiceImp"/>
+    <fullyQualifiedTypeName name="com.xworkz.application.utility.HeadphoneValidUtit"/>
+</qualifiedTypeNameHistroy>
