@@ -5,9 +5,15 @@ import java.time.LocalDate;
 import com.xworkz.application.constant.LangUsed;
 import com.xworkz.application.constant.Type;
 import com.xworkz.application.dto.ApplicationDTO;
+import com.xworkz.application.repositry.ApplicationRepositry;
 
 public class ApplicationServiceImp implements ApplicationService {
 
+	private ApplicationRepositry repo;
+	
+	public ApplicationServiceImp(ApplicationRepositry repo) {
+		this.repo=repo;
+	}
 	@Override
 	public boolean validateAndSave(ApplicationDTO dto) {
 		System.out.println("DTO is not null now validating properties");
@@ -55,20 +61,21 @@ public class ApplicationServiceImp implements ApplicationService {
 			System.out.println("name is valid");
 			validName = true;
 		} else {
-			System.out.println("name not valid");
+			System.out.println("name is invalid");
 
 		}
-		if (version > 0 && version < 60) {
+		if (version > 0 && version < 100) {
 			System.out.println("version is valid");
 			validVersion = true;
 		} else {
-			System.out.println("version is not valid");
+			System.out.println("version is invalid");
 
 		}
 		LocalDate tomorrow = LocalDate.now();
 		LocalDate startDate = LocalDate.of(2004, 5, 6);
 		if (createdDate != null && createdDate.isBefore(tomorrow) && createdDate.isAfter(startDate)) {
 			System.out.println("createdDate valid");
+			
 			validCreatedDate = true;
 		} else {
 			System.out.println("createdDate not valid");

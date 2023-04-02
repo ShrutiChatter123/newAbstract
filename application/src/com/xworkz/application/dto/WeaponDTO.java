@@ -1,12 +1,13 @@
 package com.xworkz.application.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
 import com.xworkz.application.constant.Type;
 import com.xworkz.application.constant.WeaponType;
 
-public class WeaponDTO {
+public class WeaponDTO implements Serializable{
 
 	private int id;
 	private String name;

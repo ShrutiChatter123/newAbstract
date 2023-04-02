@@ -1,9 +1,10 @@
 package com.xworkz.application.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class AwarenessDTO {
+public class AwarenessDTO implements Serializable {
 	
 	private String mainTheom;
 	private int functionDate;

@@ -90,7 +90,6 @@ public class HeadphoneServiceImp implements HeadphoneService {
 				System.err.println("invoice is invalid");
 			}
 
-			
 
 			if (warranty < 0 && warranty > 100) {
 				System.out.println("warranty is valid");
@@ -103,6 +102,7 @@ public class HeadphoneServiceImp implements HeadphoneService {
 			if( validBrand&& validModel&& validPrice && validBass&&  validColore&& validTypeAndWeight&& validCustomerName&& 
 				validInvoiceNo&& validMfgDate &&validWarrantyPeriod) {
 				return true;
+				
 			}
 			
 		}
