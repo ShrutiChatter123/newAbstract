@@ -148,6 +148,7 @@ public class EducationRepositoryImpl implements EducationRepository {
 	}
 	@Override
 	public int total() {
+		// TODO Auto-generated method stub
 		return this.indexValue;
 	}
 

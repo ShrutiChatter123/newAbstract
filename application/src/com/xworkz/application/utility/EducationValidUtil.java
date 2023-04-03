@@ -20,8 +20,8 @@ public class EducationValidUtil {
 	}
 
 	public static boolean validLocalDate(LocalDate date) {
-		LocalDate before = LocalDate.of(2024, 11, 30);
-		LocalDate after = LocalDate.of(2020, 10, 10);
+		LocalDate before = LocalDate.of(2025, 1, 1);
+		LocalDate after = LocalDate.of(2019, 1, 1);
 		if (date != null && date.isAfter(after) && date.isBefore(before)) {
 			return true;
 

@@ -58,7 +58,9 @@ public class EducationServiceImpl implements EducationService {
 				System.err.println("Invalid Percentage");
 			}
 			if (EducationValidUtil.validString(university)) {
-				System.out.println("Valid University");
+				System.out.println
+				
+				("Valid University");
 				validUniversity = true;
 			} else {
 				System.err.println("Invalid University");
@@ -72,6 +74,9 @@ public class EducationServiceImpl implements EducationService {
 			if (EducationValidUtil.validLocalDate(endDate)) {
 				System.out.println("Valid EndDate");
 				validEndDate = true;
+				
+				
+				
 			} else {
 				System.err.println("Invalid EndDate");
 			}

@@ -24,7 +24,7 @@ public class EducationRunner {
 
 		EducationService service1 = new EducationServiceImpl(repository);
 
-		EducationDTO dto2 = new EducationDTO(4, "B.com", 75, "BTVU", LocalDate.of(2022, 16, 19),
+		EducationDTO dto2 = new EducationDTO(4, "B.com", 75, "BTVU", LocalDate.of(2022, 11, 19),
 				LocalDate.of(2023, 8, 8), 1, "General", "rohini");
 
 		EducationService service2 = new EducationServiceImpl(repository);
@@ -54,7 +54,7 @@ public class EducationRunner {
 
 		EducationService service7 = new EducationServiceImpl(repository);
 		
-		EducationDTO dto8 = new EducationDTO(9, "BE", 65, "GPTU", LocalDate.of(2022, 17, 15),
+		EducationDTO dto8 = new EducationDTO(9, "BE", 65, "GPTU", LocalDate.of(2022, 10, 15),
 				LocalDate.of(2023, 4, 9), 8, "Gag", "Sana");
 
 		EducationService service8 = new EducationServiceImpl(repository);
@@ -64,8 +64,8 @@ public class EducationRunner {
 
 		EducationService service9 = new EducationServiceImpl(repository);
 		
-		EducationDTO dto10 = new EducationDTO(6, "BA", 76, "VTU", LocalDate.of(2022, 15, 15),
-				LocalDate.of(2023, 14, 2), 8, "General", "Basu");
+		EducationDTO dto10 = new EducationDTO(6, "BA", 76, "VTU", LocalDate.of(2022, 5, 15),
+				LocalDate.of(2023, 1, 2), 8, "General", "Basu");
 
 		EducationService service10 = new EducationServiceImpl(repository);
 		
@@ -80,7 +80,7 @@ public class EducationRunner {
 		EducationService service12 = new EducationServiceImpl(repository);
 		
 		EducationDTO dto13= new EducationDTO(4, "Bsc", 85, "Channamma", LocalDate.of(2022, 11, 15),
-				LocalDate.of(2023, 14, 8), 1, "General", "Kavya");
+				LocalDate.of(2023, 12, 8), 1, "General", "Kavya");
 
 		EducationService service13 = new EducationServiceImpl(repository);
 		
@@ -109,12 +109,12 @@ public class EducationRunner {
 
 		EducationService service18 = new EducationServiceImpl(repository);
 		
-		EducationDTO dto19= new EducationDTO(9, "nursing", 45, "RCU", LocalDate.of(2022, 31, 15),
+		EducationDTO dto19= new EducationDTO(9, "nursing", 45, "RCU", LocalDate.of(2022, 3, 15),
 				LocalDate.of(2023, 7, 2), 1, "General", "Anand");
 
 		EducationService service19 = new EducationServiceImpl(repository);
 		
-		EducationDTO dto20= new EducationDTO(8, "Bsc Nursing", 79, "VTU", LocalDate.of(2022, 14, 15),
+		EducationDTO dto20= new EducationDTO(8, "Bsc Nursing", 79, "VTU", LocalDate.of(2022, 1, 15),
 				LocalDate.of(2023, 4, 11), 1, "General", "Swati");
 
 		EducationService service20 = new EducationServiceImpl(repository);
