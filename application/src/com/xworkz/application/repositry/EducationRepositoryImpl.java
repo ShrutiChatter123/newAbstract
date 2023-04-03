@@ -29,8 +29,8 @@ public class EducationRepositoryImpl implements EducationRepository {
 			return false;
 		} else {
 			System.out.println("First value onwards check");
-			for (int i = 0; i < this.indexValue; i++) {
-				EducationDTO temp = value[i];
+			for (int index = 0; index < this.indexValue; index++) {
+				EducationDTO temp = value[index];
 				if (temp.equals(dto)) {
 					System.out.println("DTO already exists");
 					return true;
@@ -42,8 +42,8 @@ public class EducationRepositoryImpl implements EducationRepository {
 	}
 	@Override
 	public EducationDTO find(EducationDTO dto) {
-		for(int i=0;i<this.indexValue;i++) {
-			EducationDTO finds=this.value[i];
+		for(int index=0;index<this.indexValue;index++) {
+			EducationDTO finds=this.value[index];
 			if(finds.equals(dto)) {
 				return finds;
 			}
@@ -52,21 +52,21 @@ public class EducationRepositoryImpl implements EducationRepository {
 	}
 	@Override
 	public EducationDTO findByCandidateName(String name) {
-		for(int i=0;i<this.indexValue;i++) {
-			String findByName=this.value[i].getCandidateName();
+		for(int index=0;index<this.indexValue;index++) {
+			String findByName=this.value[index].getCandidateName();
 			if(findByName.equals(name)) {
-				return value[i];
+				return value[index];
 			}
 		}
 		return EducationRepository.super.findByCandidateName(name);
 	}
 	@Override
 	public EducationDTO findByCandidateNameAndUniversity(String name, String university) {
-		for(int i=0;i<this.indexValue;i++) {
-			String candidateName=value[i].getCandidateName();
-			String universityName=value[i].getUniversity();
+		for(int index=0;index<this.indexValue;index++) {
+			String candidateName=value[index].getCandidateName();
+			String universityName=value[index].getUniversity();
 			if(candidateName.equals(name) && universityName.equals(university)) {
-				return value[i];
+				return value[index];
 			}
 		}
 		return EducationRepository.super.findByCandidateNameAndUniversity(name, university);
@@ -74,10 +74,10 @@ public class EducationRepositoryImpl implements EducationRepository {
 	@Override
 	public boolean findBacklogByCandidateNameAndDegreeNameAndUniversity(String candidateName, String degreeName,
 			String univarsity) {
-		for(int i=0;i<this.indexValue;i++) {
-			String name=this.value[i].getCandidateName();
-			String degree=this.value[i].getDegreeName();
-			String univarcity=this.value[i].getUniversity();
+		for(int index=0;index<this.indexValue;index++) {
+			String name=this.value[index].getCandidateName();
+			String degree=this.value[index].getDegreeName();
+			String univarcity=this.value[index].getUniversity();
 			if(name.equals(candidateName) && degree.equals(degreeName) && univarcity.equals(univarsity)) {
 				return true;
 			}
@@ -88,20 +88,20 @@ public class EducationRepositoryImpl implements EducationRepository {
 	@Override
 	public EducationDTO findbyCandidateNameAndStartDateAndEndDAte(String candidateName, LocalDate startDate,
 			LocalDate EndDate) {
-		for(int i=0;i<this.indexValue;i++) {
-			String name=value[i].getCandidateName();
-			LocalDate start=value[i].getStartDate();
-			LocalDate end=value[i].getEndDate();
+		for(int index=0;index<this.indexValue;index++) {
+			String name=value[index].getCandidateName();
+			LocalDate start=value[index].getStartDate();
+			LocalDate end=value[index].getEndDate();
 			if(name.equals(candidateName) && start.equals(startDate) && end.equals(EndDate)) {
-				return value[i];
+				return value[index];
 			}
 		}
 		return EducationRepository.super.findbyCandidateNameAndStartDateAndEndDAte(candidateName, startDate, EndDate);
 	}
 	@Override
 	public double findPercentageByCandidateName(String candidateName) {
-		for(int i=0;i<this.indexValue;i++) {
-			String name=value[i].getCandidateName();
+		for(int index=0;index<this.indexValue;index++) {
+			String name=value[index].getCandidateName();
 			if(name.equals(candidateName)) {
 				return 0;
 			}
@@ -111,12 +111,12 @@ public class EducationRepositoryImpl implements EducationRepository {
 	@Override
 	public String findStreamByCandidateNameAndDegreeNameAndUniversity(String candidateName, String degreeName,
 			String universityName) {
-		for(int i=0;i<this.indexValue;i++) {
-			String name=value[i].getCandidateName();
-			String degree=this.value[i].getDegreeName();
-			String university=this.value[i].getUniversity();
+		for(int index=0;index<this.indexValue;index++) {
+			String name=value[index].getCandidateName();
+			String degree=this.value[index].getDegreeName();
+			String university=this.value[index].getUniversity();
 			if(name.equals(candidateName)&& degree.equals(degreeName) && university.equals(universityName)) {
-				return value[i].getStream();
+				return value[index].getStream();
 			}
 		}
 		return EducationRepository.super.findStreamByCandidateNameAndDegreeNameAndUniversity(candidateName, degreeName,
@@ -125,10 +125,10 @@ public class EducationRepositoryImpl implements EducationRepository {
 	@Override
 	public int findIdByCandidateNameAndDegreeNameAndUnivaersity(String candidateName, String degreeName,
 			String university) {
-		for(int i=0;i<this.indexValue;i++) {
-			String name=this.value[i].getCandidateName();
-			String degree=this.value[i].getDegreeName();
-			String uni=this.value[i].getUniversity();
+		for(int index=0;index<this.indexValue;index++) {
+			String name=this.value[index].getCandidateName();
+			String degree=this.value[index].getDegreeName();
+			String uni=this.value[index].getUniversity();
 			if(name.equals(candidateName)&& degree.equals(degreeName)&& uni.equals(university)) {
 				return 0;
 			}
@@ -138,17 +138,16 @@ public class EducationRepositoryImpl implements EducationRepository {
 	}
 	@Override
 	public String findUniversityByCandidateName(String CandidateName) {
-		for(int i=0;i<this.indexValue;i++) {
-			String name=this.value[i].getCandidateName();
+		for(int index=0;index<this.indexValue;index++) {
+			String name=this.value[index].getCandidateName();
 			if(name.equals(CandidateName)) {
-				return value[i].getCandidateName();
+				return value[index].getCandidateName();
 			}
 		}
 		return EducationRepository.super.findUniversityByCandidateName(CandidateName);
 	}
 	@Override
 	public int total() {
-		// TODO Auto-generated method stub
 		return this.indexValue;
 	}
 

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 import com.xworkz.application.dto.EducationDTO;
 import com.xworkz.application.exception.EducationMemoryFullException;
-import com.xworkz.application.exception.InvalidEducationException;
+import com.xworkz.application.exception.EducationInvalidException;
 import com.xworkz.application.repositry.EducationRepository;
 import com.xworkz.application.repositry.EducationRepositoryImpl;
 import com.xworkz.application.service.EducationService;
@@ -416,7 +416,7 @@ public class EducationRunner {
 
 			
 			
-		} catch (InvalidEducationException e) {
+		} catch (EducationInvalidException e) {
 			e.getMessage();
 		}catch(EducationMemoryFullException e) {
 			e.getMessage();

@@ -3,7 +3,7 @@ package com.xworkz.application.service;
 import java.time.LocalDate;
 
 import com.xworkz.application.dto.EducationDTO;
-import com.xworkz.application.exception.InvalidEducationException;
+import com.xworkz.application.exception.EducationInvalidException;
 import com.xworkz.application.repositry.EducationRepository;
 import com.xworkz.application.utility.EducationValidUtil;
 
@@ -16,7 +16,7 @@ public class EducationServiceImpl implements EducationService {
 	}
 
 	@Override
-	public boolean validateAndThenSave(EducationDTO dto) throws InvalidEducationException {
+	public boolean validateAndThenSave(EducationDTO dto) throws EducationInvalidException {
 		if (dto != null) {
 			System.out.println("DTO is not null,so validate");
 			int id = dto.getId();
@@ -103,7 +103,7 @@ public class EducationServiceImpl implements EducationService {
 					return save;
 				} else {
 					System.err.println("DTO is dupliacte so dont save");
-					throw new InvalidEducationException("DATA is invalid");
+					throw new EducationInvalidException("DATA is invalid");
 
 				}
 
@@ -117,88 +117,87 @@ public class EducationServiceImpl implements EducationService {
 	}
 
 	@Override
-	public EducationDTO find(EducationDTO dto) throws InvalidEducationException {
+	public EducationDTO find(EducationDTO dto) throws EducationInvalidException {
 		if (dto != null) {
 			this.educationRepository.find(dto);
 		}
-		throw new InvalidEducationException("Dto validation exception: passing null dto");
+		throw new EducationInvalidException("Dto validation exception: passing null dto");
 	}
 
 	@Override
-	public EducationDTO findByCandidateName(String name) throws InvalidEducationException {
+	public EducationDTO findByCandidateName(String name) throws EducationInvalidException {
 		if (EducationValidUtil.validString(name)) {
 			this.educationRepository.findByCandidateName(name);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid name");
+		throw new EducationInvalidException("Data validation exception:Passing invalid name");
 	}
 
 	@Override
 	public EducationDTO findByCandidateNameAndUniversity(String name, String university)
-			throws InvalidEducationException {
+			throws EducationInvalidException {
 		if (EducationValidUtil.validString(name) && EducationValidUtil.validString(university)) {
 			this.educationRepository.findByCandidateNameAndUniversity(name, university);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid name/university");
+		throw new EducationInvalidException("Data validation exception:Passing invalid name/university");
 	}
 
 	@Override
 	public boolean findBacklogByCandidateNameAndDegreeNameAndUniversity(String candidateName, String degreeName,
-			String univarsity) throws InvalidEducationException {
+			String univarsity) throws EducationInvalidException {
 		if (EducationValidUtil.validString(candidateName) && EducationValidUtil.validString(degreeName)
 				&& EducationValidUtil.validString(univarsity)) {
 			this.educationRepository.findBacklogByCandidateNameAndDegreeNameAndUniversity(candidateName, degreeName,
 					univarsity);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid name/degreeName/university");
+		throw new EducationInvalidException("Data validation exception:Passing invalid name/degreeName/university");
 	}
 
 	@Override
 	public EducationDTO findbyCandidateNameAndStartDateAndEndDAte(String candidateName, LocalDate startDate,
-			LocalDate EndDate) throws InvalidEducationException {
+			LocalDate EndDate) throws EducationInvalidException {
 		if (EducationValidUtil.validString(candidateName) && EducationValidUtil.validLocalDate(startDate)
 				&& EducationValidUtil.validLocalDate(EndDate)) {
 			this.educationRepository.findbyCandidateNameAndStartDateAndEndDAte(candidateName, startDate, EndDate);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid name/startdate/enddate");
+		throw new EducationInvalidException("Data validation exception:Passing invalid name/startdate/enddate");
 	}
 
 	@Override
-	public double findPercentageByCandidateName(String candidateName) throws InvalidEducationException {
+	public double findPercentageByCandidateName(String candidateName) throws EducationInvalidException {
 		if (EducationValidUtil.validString(candidateName)) {
 			this.educationRepository.findPercentageByCandidateName(candidateName);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid name");
+		throw new EducationInvalidException("Data validation exception:Passing invalid name");
 	}
 
 	@Override
 	public String findStreamByCandidateNameAndDegreeNameAndUniversity(String candidateName, String degreeName,
-			String universityName) throws InvalidEducationException {
+			String universityName) throws EducationInvalidException {
 		if (EducationValidUtil.validString(candidateName) && EducationValidUtil.validString(degreeName)
 				&& EducationValidUtil.validString(universityName)) {
 			this.educationRepository.findStreamByCandidateNameAndDegreeNameAndUniversity(candidateName, degreeName,
 					universityName);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid name/degreeName/UniversityName");
+		throw new EducationInvalidException("Data validation exception:Passing invalid name/degreeName/UniversityName");
 
 	}
 	@Override
 	public int findIdByCandidateNameAndDegreeNameAndUnivaersity(String candidateName, String degreeName,
-			String university) throws InvalidEducationException {
+			String university) throws EducationInvalidException {
 		if(EducationValidUtil.validString(candidateName)&& EducationValidUtil.validString(degreeName) && EducationValidUtil.validString(university)) {
 			this.educationRepository.findIdByCandidateNameAndDegreeNameAndUnivaersity(candidateName, degreeName, university);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid name/degreeName/UniversityName");
+		throw new EducationInvalidException("Data validation exception:Passing invalid name/degreeName/UniversityName");
 	}
 	@Override
-	public String findUniversityByCandidateName(String CandidateName) throws InvalidEducationException {
+	public String findUniversityByCandidateName(String CandidateName) throws EducationInvalidException {
 		if(EducationValidUtil.validString(CandidateName)) {
 			this.educationRepository.findUniversityByCandidateName(CandidateName);
 		}
-		throw new InvalidEducationException("Data validation exception:Passing invalid CandidateName");
+		throw new EducationInvalidException("Data validation exception:Passing invalid CandidateName");
 	}
 	@Override
 	public int getTotal() {
-		// TODO Auto-generated method stub
 		return this.educationRepository.total();
 	}
 
