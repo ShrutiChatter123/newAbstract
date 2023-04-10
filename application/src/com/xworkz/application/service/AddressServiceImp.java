@@ -4,7 +4,7 @@ import com.xworkz.application.dto.AddressDTO;
 import com.xworkz.application.exception.DataValidException;
 import com.xworkz.application.repositry.AddressRepository;
 import com.xworkz.application.repositry.ApplicationRepositry;
-import com.xworkz.application.utility.AddressUtil;
+import static com.xworkz.application.utility.AddressUtil.*;
 
 public class AddressServiceImp implements AddressService {
 
@@ -40,14 +40,14 @@ public class AddressServiceImp implements AddressService {
 			boolean validState = false;
 
 			String Street = dto.getStreet();
-			if (AddressUtil.validString(Street)) {
+			if (validString(Street)) {
 				validStreet = true;
 				System.out.println("street is valid");
 			} else {
 				System.out.println("street invalid");
 			}
 			String Area = dto.getArea();
-			if (AddressUtil.validString(Area)) {
+			if (validString(Area)) {
 				validArea = true;
 				System.out.println("area is valid");
 			} else {
@@ -55,7 +55,7 @@ public class AddressServiceImp implements AddressService {
 			}
 
 			int Pincode = dto.getPincode();
-			if (AddressUtil.validint(Pincode)) {
+			if (validint(Pincode)) {
 				validPincode = true;
 				System.out.println("pincode is valid");
 			} else {
@@ -63,7 +63,7 @@ public class AddressServiceImp implements AddressService {
 			}
 
 			String Floor = dto.getFloor();
-			if (AddressUtil.validString(Floor)) {
+			if (validString(Floor)) {
 				validFloor = true;
 				System.out.println("floor is valid");
 			} else {
@@ -71,7 +71,7 @@ public class AddressServiceImp implements AddressService {
 			}
 
 			int Number = dto.getNumber();
-			if (AddressUtil.validint(Number)) {
+			if (validint(Number)) {
 				validNumber = true;
 				System.out.println("number valid");
 			} else {
@@ -79,7 +79,7 @@ public class AddressServiceImp implements AddressService {
 			}
 
 			String City = dto.getCity();
-			if (AddressUtil.validString(City)) {
+			if (validString(City)) {
 				validCity = true;
 				System.out.println("city is valid");
 			} else {
@@ -87,15 +87,15 @@ public class AddressServiceImp implements AddressService {
 			}
 
 			String State = dto.getSatate();
-			if (AddressUtil.validString(State)) {
+			if (validString(State)) {
 				validState = true;
 				System.out.println("state is valid");
 			} else {
 				System.out.println("state invalid");
 
 			}
-		}
-		if (AddressUtil.validFlags(validStreet, validArea, validPincode, validFloor, validNumber, validCity)) {
+		
+		if (validFlags(validStreet,validArea,validPincode,validFloor,validNumber,validCity,validState)) {
 			
 			boolean temp=repo.save(dto);
 			if(temp) {
@@ -104,6 +104,8 @@ public class AddressServiceImp implements AddressService {
 				return false;
 			}
 		}
+		}
+		return false;
 	}
 
 	public int total() {
@@ -111,7 +113,7 @@ public class AddressServiceImp implements AddressService {
 	}
 
 	public AddressDTO findByNumber(int number) throws DataValidException {
-		if(AddressUtil.validint(number)) {
+		if(validint(number)) {
 			AddressDTO dto=repo.findByNumber(number);
 			return dto;
 		}
@@ -129,7 +131,7 @@ public class AddressServiceImp implements AddressService {
 	}
 	
 	public AddressDTO findByStreet(String street) throws DataValidException {
-		if(AddressUtil.validString(street)) {
+		if(validString(street)) {
 			AddressDTO dto=repo.findByStreet(street);
 			return dto;
 		}
@@ -138,7 +140,7 @@ public class AddressServiceImp implements AddressService {
 	}
 	
 	public AddressDTO findByPincode(int pincode) throws DataValidException {
-		if(AddressUtil.validint(pincode)) {
+		if(validint(pincode)) {
 			AddressDTO dto=repo.findByPincode(pincode);
 			return dto;
 		}
@@ -147,7 +149,7 @@ public class AddressServiceImp implements AddressService {
 	}
 	
 	public AddressDTO findByStreetAndPincodeAndArea(int pincode,String area,String street) throws DataValidException {
-		if(AddressUtil.validString(street)&&AddressUtil.validint(pincode)&& AddressUtil.validString(street)) {
+		if(validString(street)&&validint(pincode)&& validString(street)) {
 			AddressDTO dto=repo.findByStreetAndPincodeAndArea(street, pincode, area);
 			return dto;
 		}
@@ -156,7 +158,7 @@ public class AddressServiceImp implements AddressService {
 	}
 	
 	 public AddressDTO findByCityAndState(String city,String state) throws DataValidException {
-		 if(AddressUtil.validString(state)&& AddressUtil.validString(state)) {
+		 if(validString(state)&& validString(state)) {
 			 AddressDTO dto=repo.findByCityAndState(city, state);
 			 return dto;
 		 }
@@ -165,7 +167,7 @@ public class AddressServiceImp implements AddressService {
 	 }
 	 
 	 public String findFloorByNumber(int number)throws DataValidException {
-		 if(AddressUtil.validint(number)) {
+		 if(validint(number)) {
 			 String floor=repo.findFloorByNumber(number);
 			 return floor;
 		 }
@@ -173,7 +175,7 @@ public class AddressServiceImp implements AddressService {
 	 }
 	 
 	 public String findCityByNumberAndFloorAndStreetAndPincode(int number,String floor,String street,int pincode) throws DataValidException {
-		if(AddressUtil.validint(pincode)&& AddressUtil.validString(street)&& AddressUtil.validString(street)&& AddressUtil.validint(pincode)) {
+		if(validint(pincode)&& validString(street)&& validString(street)&& validint(pincode)) {
 			String dto=repo.findCityByNumberAndFloorAndStreetAndPincode(number, floor, street, pincode);
 			return dto;
 		}
@@ -183,7 +185,7 @@ public class AddressServiceImp implements AddressService {
 	 }
 	 
 	 public int findPincodeByNumber(int number) throws DataValidException {
-		 if(AddressUtil.validint(number)) {
+		 if(validint(number)) {
 			 int pin=repo.findPincodeByNumber(number);
 			 return pin;
 		 }

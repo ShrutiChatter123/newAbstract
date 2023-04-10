@@ -30,8 +30,8 @@ public class ApplicationRepoImp implements ApplicationRepositry {
 	}
 
 	AddressDTO findByNumber(int number) {
-		for(int index=0;index<appsindex;index++) {
-			apps[appsindex];
+		for(int index=0;index<apps.length;index++) {
+			return appsindex++;
 		}
 		
 		return null;

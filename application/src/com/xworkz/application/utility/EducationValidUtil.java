@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 public class EducationValidUtil {
 
-	
 	public static boolean validInt(int value) {
 		if (value > 0 && value < 1000000) {
 			return true;
@@ -28,10 +27,11 @@ public class EducationValidUtil {
 		}
 		return false;
 	}
+
 	public static boolean validFlag(boolean... flag) {
-		for(int i=0;i<flag.length;i++) {
-			boolean temp=flag[i];
-			if(!temp) {
+		for (int i = 0; i < flag.length; i++) {
+			boolean temp = flag[i];
+			if (!temp) {
 				return false;
 			}
 		}

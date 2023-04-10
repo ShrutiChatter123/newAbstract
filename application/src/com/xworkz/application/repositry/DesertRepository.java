@@ -20,7 +20,7 @@ public interface DesertRepository {
 		return null;
 	}
 	
-	default double findByAreaByName(String name) {
+	default double findAreaByName(String name) {
 		return 0;
 		
 	}

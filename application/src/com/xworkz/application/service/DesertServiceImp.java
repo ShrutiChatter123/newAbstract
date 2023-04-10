@@ -3,7 +3,7 @@ package com.xworkz.application.service;
 import com.xworkz.application.dto.DesertDTO;
 import com.xworkz.application.exception.DesertInvalidException;
 import com.xworkz.application.repositry.DesertRepository;
-import com.xworkz.application.utility.DesertUtil;
+import static com.xworkz.application.utility.DesertUtil.*;
 
 public class DesertServiceImp implements DesertService {
 
@@ -15,17 +15,19 @@ public class DesertServiceImp implements DesertService {
 
 	@Override
 	public boolean validateAndSave(DesertDTO dto) throws DesertInvalidException {
-		System.out.println("dto is not null now validation");
+		System.out.println("ruuning save in dto ");
 
 		if (dto != null) {
-			System.out.println("dto is not invalid");
+			System.out.println("dto is not null:"+dto);
 
+			
+			
 			int id = dto.getId();
 			String name = dto.getName();
 			String country = dto.getCountry();
 			double area = dto.getArea();
-			int mintemp= dto.getMinTemp();
-			int maxtemp =  dto.getMaxTemp();
+			int mintemp = dto.getMinTemp();
+			int maxtemp = dto.getMaxTemp();
 
 			boolean validId = false;
 			boolean validName = false;
@@ -34,105 +36,115 @@ public class DesertServiceImp implements DesertService {
 			boolean validMinTemp = false;
 			boolean validMaxTemp = false;
 
-			if (DesertUtil.validInt(id)) {
+			if (validInt(id)) {
 				System.out.println("id is valid");
 				validId = true;
 			} else {
-				System.out.println("invalid id");
+				System.err.println("invalid id");
 			}
-			
-		if(DesertUtil.validString(name)) {
-			System.out.println("name is valid");
-			validName=true;
-		}else {
-			System.out.println("invalid name");
-		}
-		
-		if(DesertUtil.validDouble(area)) {
-			System.out.println("area is valid");
-			validArea=true;
-		}else {
-			System.out.println("invalid area");
-		}
-		
-		if(DesertUtil.validInt(mintemp)) {
-			System.out.println("mintemp is valid");
-			validMinTemp=true;
-		}else {
-			System.out.println("mintemp is invalid");
-		}
-		
-		if(DesertUtil.validInt(maxtemp)) {
-			System.out.println("maxtemp is valid");
-			validMaxTemp=true;
-		}else {
-			System.out.println("maxtemp is invalid");
-		}
 
-		
-		if(DesertUtil.validFlags(validId,validName,validCountry,validArea,validMinTemp,validMaxTemp)) {
-			System.out.println("dto is save");
-			boolean exist = this.repo.isExist(dto );
-			if (!exist) {
-				boolean save = this.repo.save(dto);
-				System.out.println("DTO is not duplicate save it");
-				return save;
-		}else {
-			System.err.println("DTO is dupliacte so dont save ");
-			throw new DesertInvalidException("data is invalid");
-		}
-		}else {
-			System.err.println("Validation Not Done so dont save");
-		}
-	} else {
-		System.err.println("Dto is null so dont validate");
-	}
-	return false;
+			if (validString(name)) {
+				System.out.println("name is valid");
+				validName = true;
+			} else {
+				System.err.println("invalid name");
+			}
+			if(validString(country)) {
+				System.out.println("country is valid");
+				validCountry=true;
+			}else {
+				System.err.println("Invalid country");
+			}
 
+			if (validDouble(area)) {
+				System.out.println("area is valid");
+				validArea = true;
+			} else {
+				System.err.println("invalid area");
+			}
+
+			if (validInt(mintemp)) {
+				System.out.println("mintemp is valid");
+				validMinTemp = true;
+			} else {
+				System.err.println("mintemp is invalid");
+			}
+
+			if (validInt(maxtemp)) {
+				System.out.println("maxtemp is valid");
+				validMaxTemp = true;
+			} else {
+				System.err.println("maxtemp is invalid");
+			}
+
+			if (validFlags(validId, validName, validCountry, validArea, validMinTemp, validMaxTemp)) {
+				System.out.println("dto is save");
+					boolean exist=this.repo.isExist(dto);
+					if(!exist) {
+						boolean save = this.repo.save(dto);
+						return save;
+					}
+					
+				}else {
+					System.err.println("data is invalid so not save");
+					throw new DesertInvalidException("data is invalid");
+
+			}
+		}
+			else {
+				System.err.println("dto is null");
+			}
+		return false;
+		
 	
 	}
-	
+		
+
+
+
 	@Override
 	public DesertDTO find(DesertDTO dto) throws DesertInvalidException {
-		if(dto!=null) {
-			this.repo.find(dto);
+		if (dto != null) {
+			DesertDTO finds=this.repo.find(dto);
+			return finds;
 		}
 		throw new DesertInvalidException("passing null dto");
 	}
-	
+
 	@Override
 	public DesertDTO findByName(String name) throws DesertInvalidException {
-		if(DesertUtil.validString(name)) {
-			this.repo.finByName(name);
+		if (validString(name)) {
+			DesertDTO names=this.repo.finByName(name);
+			return names;
 		}
 		throw new DesertInvalidException("data valid exception:passing invalid name ");
 	}
-	
+
 	@Override
 	public double findAreaByName(String name) throws DesertInvalidException {
-		if(DesertUtil.validDouble(0)&&DesertUtil.validString(name)) {
-			this.repo.findByAreaByName(name);
-			
+		if ( validString(name)) {
+			double fnd =this.repo.findAreaByName(name);
+			return fnd;
+
 		}
 		throw new DesertInvalidException("data valid exception:passing inavalid name");
 	}
-	
+
 	@Override
 	public DesertDTO findByNameAndCountryAndArea(String name, String country, double area)
 			throws DesertInvalidException {
-		if(DesertUtil.validString(name)&&DesertUtil.validString(country)&&DesertUtil.validDouble(area)) {
-			this.repo.findByNameAndCountryAndArea(name, country, area);
+		System.out.println("svrimpl: findByNameAndCountryAndArea() started");
+		if (validString(name) && validString(country) && validDouble(area)) {
+			DesertDTO nand=this.repo.findByNameAndCountryAndArea(name, country, area);
+			System.out.println("svrimpl: findByNameAndCountryAndArea() ended");
+			return nand;
 		}
 		throw new DesertInvalidException("data invalid :passing invalid name country area");
 	}
-	
+
 	@Override
 	public int total() {
-		return DesertService.super.total();
+		return this.repo.total();
 	}
-	
-	
-	
-
 
 }
