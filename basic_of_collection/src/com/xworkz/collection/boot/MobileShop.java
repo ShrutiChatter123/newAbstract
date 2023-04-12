@@ -1,4 +1,4 @@
-package com.xworkz.basic_of_collection.boot;
+package com.xworkz.collection.boot;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -163,8 +163,11 @@ public class MobileShop {
 		happy.add("collage");
 		happy.add("degree");
 
+		Object[] objectArray=happy.toArray();
+		
+		
 		for (String loop : happy) {
-			
+
 			if (Objects.nonNull(loop)) {
 				System.out.println(loop);
 			}
@@ -172,15 +175,15 @@ public class MobileShop {
 		}
 		System.out.println("***************itertator*****************");
 		Iterator<String> java = happy.iterator();
-		while(java.hasNext()) {
-			String obj=java.next();
-			if(Objects.isNull(obj)) {
+		while (java.hasNext()) {
+			String obj = java.next();
+			if (Objects.isNull(obj)) {
 				java.remove();
 			}
-			
+
 		}
 		System.out.println(remove);
-		System.out.println("size of the remove:"+happy.size());
+		System.out.println("size of the remove:" + happy.size());
 
 	}
 

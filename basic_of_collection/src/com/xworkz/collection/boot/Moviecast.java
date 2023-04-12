@@ -1,4 +1,4 @@
-package com.xworkz.basic_of_collection.boot;
+package com.xworkz.collection.boot;
 
 import java.util.ArrayList;
 import java.util.Collection;
