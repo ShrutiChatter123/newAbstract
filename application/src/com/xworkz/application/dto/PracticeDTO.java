@@ -11,7 +11,6 @@ public class PracticeDTO {
 	
 	
 	public PracticeDTO(int id, String name, String location) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.location = location;

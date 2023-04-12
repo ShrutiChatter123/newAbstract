@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.xworkz.application.exception.EducationValidExceptrion"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.repositry.EducationRepoImp"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.utility.EducationUtil"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.utility.EducationValidUtil"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.exception.InvalidEducationException"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.repositry.EducationRepository"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.service.EducationService"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.repositry.EducationRepositoryImpl"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.service.EducationServiceImpl"/>
     <fullyQualifiedTypeName name="com.xworkz.application.service.DesertService"/>
     <fullyQualifiedTypeName name="com.xworkz.application.repositry.DesertRepository"/>
     <fullyQualifiedTypeName name="com.xworkz.application.repositry.DesertRepoImp"/>
     <fullyQualifiedTypeName name="com.xworkz.application.exception.EducationMemoryFullException"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="javax.swing.DefaultBoundedRangeModel"/>
     <fullyQualifiedTypeName name="com.xworkz.application.dto.EducationDTO"/>
@@ -60,4 +49,15 @@
     <fullyQualifiedTypeName name="com.xworkz.application.exception.ProjectMemoryFullException"/>
     <fullyQualifiedTypeName name="com.xworkz.application.utility.DesertUtil"/>
     <fullyQualifiedTypeName name="com.xworkz.application.dto.ProjectDTO"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
 </qualifiedTypeNameHistroy>
