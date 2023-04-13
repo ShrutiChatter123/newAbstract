@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.xworkz.application.service.DesertService"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.repositry.DesertRepository"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.repositry.DesertRepoImp"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.exception.EducationMemoryFullException"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="javax.swing.DefaultBoundedRangeModel"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.dto.EducationDTO"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.service.FunctionService"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.service.FunctionServiceImp"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.repositry.FunctionRepository"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.repositry.FunctionRepositoryImp"/>
-    <fullyQualifiedTypeName name="com.xworkz.application.dto.PracticeDTO"/>
     <fullyQualifiedTypeName name="com.xworkz.application.service.DesertServiceImp"/>
     <fullyQualifiedTypeName name="com.xworkz.application.service.AwarenessService"/>
     <fullyQualifiedTypeName name="com.xworkz.application.service.AwaarenessServiceImp"/>
@@ -53,11 +40,24 @@
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.functional.Util"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.util.Util"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.functional.Player"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.util.PlayerUtil"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.functional.Gambler"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.util.GamblerUtil"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.util.ShooterUtil"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.functional.Runner"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.util.RunnerUtil"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.functional.Shooter"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.functional.Eater"/>
+    <fullyQualifiedTypeName name="com.xworkz.collection.util.EaterUtil"/>
 </qualifiedTypeNameHistroy>

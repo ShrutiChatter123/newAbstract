@@ -1,5 +1,6 @@
-package com.xworkz.collection.functional;
+package com.xworkz.collection.Runner;
 
+import com.xworkz.collection.functional.Shooter;
 import com.xworkz.collection.util.ShooterUtil;
 
 public class ShooterRunner {

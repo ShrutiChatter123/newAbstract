@@ -1,5 +1,6 @@
-package com.xworkz.collection.functional;
+package com.xworkz.collection.Runner;
 
+import com.xworkz.collection.functional.Hunter;
 import com.xworkz.collection.util.Util;
 
 public class HunterRunner {
@@ -18,4 +19,5 @@ public class HunterRunner {
 		});
 		
 	}
+	
 }

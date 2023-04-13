@@ -1,5 +1,6 @@
-package com.xworkz.collection.functional;
+package com.xworkz.collection.Runner;
 
+import com.xworkz.collection.functional.Gambler;
 import com.xworkz.collection.util.GamblerUtil;
 
 public class GamblerRunner {
@@ -18,5 +19,4 @@ public class GamblerRunner {
 		};
 		GamblerUtil.show(gambler);
 	}
-	
 }

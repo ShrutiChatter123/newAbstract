@@ -1,10 +1,11 @@
-package com.xworkz.collection.functional;
+package com.xworkz.collection.Runner;
 
+import com.xworkz.collection.functional.Eater;
 import com.xworkz.collection.util.EaterUtil;
 
 public class EaterRunner {
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		
 		Eater eater=(item,quantity)->{
 			System.out.println("Item:"+ item);

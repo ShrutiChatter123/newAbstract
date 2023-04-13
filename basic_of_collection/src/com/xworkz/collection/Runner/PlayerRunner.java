@@ -1,5 +1,6 @@
-package com.xworkz.collection.functional;
+package com.xworkz.collection.Runner;
 
+import com.xworkz.collection.functional.Player;
 import com.xworkz.collection.util.PlayerUtil;
 
 public class PlayerRunner {
@@ -13,5 +14,5 @@ public class PlayerRunner {
 		};
 		PlayerUtil.test(player);
 	}
-	
+
 }
