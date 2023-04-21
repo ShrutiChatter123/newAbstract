@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EmailIdsRunner {
 
 	public static void main(String[] args) {
-		
-		Collection<String> mail=new ArrayList<>();
+
+		Collection<String> mail = new ArrayList<>();
 		mail.add("Shruchatter79136@gmail.com");
 		mail.add("kavya@gmail.com");
 		mail.add("shilpa123@gmail.com");
@@ -35,62 +36,25 @@ public class EmailIdsRunner {
 		mail.add("lacchi.sahki@xworkz.com");
 		mail.add("mutturaj.chatter@xworkz.com");
 		mail.add("kavya.kavya@xworkz.com");
-		
-		mail.stream().map(ref->ref.toUpperCase()).forEach(ref->System.out.println(ref));
-		
-		System.out.println("**********************unique domain**********************");
-		
-		Collection<String> uniqueDomain=new HashSet<>();
-		for(String emailCollection:mail) {
-			String[] parts=emailCollection.split("@");
-			if(parts.length>1) {
-				uniqueDomain.add(parts[1]);
-			}
-		}
-		System.out.println("unique domai:");
-		System.out.println(uniqueDomain);
-		
-		System.out.println("*******************without unique domain****************");
-		List<String>noDomainEmails=new ArrayList<>();
-		for(String emailCollection1:mail) {
-			noDomainEmails.add(emailCollection1.split("@")[0]);
-		}
-		System.out.println("Emails without domain");
-		System.out.println(noDomainEmails);
-		
-		System.out.println("*****************only gmail******************");
-		
-		List<String>onlygmail=new ArrayList<>();
-		for(String yesgmail:mail) {
-			if(yesgmail.endsWith("@gmail.com")) {
-				onlygmail.add(yesgmail);
-			}
-		}
-		System.out.println("onlyg mail");
-		System.out.println(onlygmail);
-		
-		System.out.println("***************only xworkz**********************");
-		
-		List<String>xworkz=new ArrayList<>();
-		for(String onlyXworkz:mail) {
-			if(onlyXworkz.endsWith("@xworkz.com")) {
-				xworkz.add(onlyXworkz);
-			}
-		}
-		System.out.println("xworkz");
-		System.out.println(xworkz);
-		
-		System.out.println("*****************not gmail& not xworkz****************");
-		List<String>notGmailandXwporkz=new ArrayList<>();
-		for(String not:mail) {
-			if(!not.endsWith("@gmail.com")&&!not.endsWith("xworkz.com")) {
-				notGmailandXwporkz.add(not);
-			}
-		}
-		System.out.println("email that are not with gmail and xworkz");
-		System.out.println(notGmailandXwporkz);
-		
-		
+
+		mail.stream().map(ref -> ref.toUpperCase()).forEach(ref -> System.out.println(ref));
+
+		System.out.println("===================unique domain==============");
+		mail.stream().map(e -> e.split("@")[1]).collect(Collectors.toSet()).forEach(e -> System.out.println(e));
+
+		System.out.println("================without unique domain================");
+		mail.stream().map(e -> e.split("@")[0]).collect(Collectors.toSet()).forEach(e -> System.out.println(e));
+
+		System.out.println("=============only gmil id==============");
+		mail.stream().filter(e -> e.contains("gmail.com")).forEach(e -> System.out.println(e));
+
+		System.out.println("=============only xworkz====================");
+		mail.stream().filter(ref -> ref.contains("xworkz.com")).forEach(ref -> System.out.println(ref));
+
+		System.out.println("===========not gmail& not xworkz================");
+		mail.stream().filter(ref -> !ref.contains("gmail.com") && !ref.contains("xworkz.com"))
+				.forEach(ref -> System.out.println(ref));
+
 	}
-	
+
 }
