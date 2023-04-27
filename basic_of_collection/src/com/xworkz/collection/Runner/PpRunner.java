@@ -65,6 +65,8 @@ public class PpRunner {
 			if (yesgmail.endsWith("@gmail.com")) {
 				onlygmail.add(yesgmail);
 			}
+			
+			
 		}
 		System.out.println("onlyg mail");
 		System.out.println(onlygmail);

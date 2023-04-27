@@ -45,7 +45,7 @@ public class GroceryDTO implements Serializable,Comparable<GroceryDTO> {
 	
 	@Override
 	public int compareTo(GroceryDTO o) {
-		// TODO Auto-generated method stub
+		
 		return this.name.compareTo(o.getName());
 	}
 

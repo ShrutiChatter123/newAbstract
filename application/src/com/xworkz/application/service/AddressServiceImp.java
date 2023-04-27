@@ -6,6 +6,8 @@ import com.xworkz.application.repositry.AddressRepository;
 import com.xworkz.application.repositry.ApplicationRepositry;
 import static com.xworkz.application.utility.AddressUtil.*;
 
+import javax.xml.validation.Validator;
+
 public class AddressServiceImp implements AddressService {
 
 	private AddressRepository repo;
@@ -23,6 +25,8 @@ public class AddressServiceImp implements AddressService {
 		if (dto != null) {
 			System.out.println("dto is not valid");
 
+		
+			
 			String street = dto.getStreet();
 			String area = dto.getArea();
 			int pincode = dto.getPincode();
