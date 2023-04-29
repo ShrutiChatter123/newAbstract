@@ -9,11 +9,13 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.electricity.dto.ShowRoomDTO;
 import com.xworkz.electricity.repository.ShowRoomRepository;
+import com.xworkz.electricity.util.ValidateUtil;
 
 public class ShowRoomServiceImpl implements ShowRoomService {
 
 	private ShowRoomRepository repo;
 
+	private ValidateUtil<ShowRoomDTO>ref=new ValidateUtil<>();
 	public ShowRoomServiceImpl(ShowRoomRepository repo) {
 		this.repo = repo;
 	}
@@ -25,14 +27,8 @@ public class ShowRoomServiceImpl implements ShowRoomService {
 		if (dto != null) {
 			System.out.println("dto is not null");
 
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator valid = factory.getValidator();
-
-			Set<ConstraintViolation<ShowRoomDTO>> ref = valid.validate(dto);
-			System.out.println("totalconstraints:" + ref.size());
-
-			ref.forEach(cv -> System.out.println(cv.getPropertyPath() + " " + cv.getMessage()));
-			if (ref.isEmpty()) {
+			
+			if (ref.validDTO(dto)) {
 				System.out.println("no constrains found in:" + dto);
 
 				return this.repo.save(dto);

@@ -13,7 +13,19 @@ import javax.validation.constraints.PastOrPresent;
 import com.xworkz.electricity.constance.Location;
 
 import io.smallrye.common.constraint.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Setter
+@Getter
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class ShowRoomDTO implements Serializable, Comparable<ShowRoomDTO> {
 
 	@Min(value = 20, message = "id is greater than 20")
@@ -36,88 +48,7 @@ public class ShowRoomDTO implements Serializable, Comparable<ShowRoomDTO> {
 	@PastOrPresent(message = "closed date counted with the date")
 	private LocalDate closedDate;
 
-	@Override
-	public String toString() {
-		return "ShowRoomDTO [id=" + id + ", name=" + name + ", location=" + location + ", number=" + number
-				+ ", openDate=" + openDate + ", closedDate=" + closedDate + "]";
-	}
-
-	public ShowRoomDTO(int id, String name, Location location, long number, LocalDate openDate, LocalDate closedDate) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.location = location;
-		this.number = number;
-		this.openDate = openDate;
-		this.closedDate = closedDate;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(closedDate, id, location, name, number, openDate);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ShowRoomDTO other = (ShowRoomDTO) obj;
-		return Objects.equals(closedDate, other.closedDate) && id == other.id
-				&& Objects.equals(location, other.location) && Objects.equals(name, other.name)
-				&& number == other.number && Objects.equals(openDate, other.openDate);
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public Location getLocation() {
-		return location;
-	}
-
-	public void setLocation(Location location) {
-		this.location = location;
-	}
-
-	public long getNumber() {
-		return number;
-	}
-
-	public void setNumber(long number) {
-		this.number = number;
-	}
-
-	public LocalDate getOpenDate() {
-		return openDate;
-	}
-
-	public void setOpenDate(LocalDate openDate) {
-		this.openDate = openDate;
-	}
-
-	public LocalDate getClosedDate() {
-		return closedDate;
-	}
-
-	public void setClosedDate(LocalDate closedDate) {
-		this.closedDate = closedDate;
-	}
+	
 
 	@Override
 	public int compareTo(ShowRoomDTO o) {

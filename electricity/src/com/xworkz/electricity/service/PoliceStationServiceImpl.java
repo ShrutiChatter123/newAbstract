@@ -9,11 +9,13 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.electricity.dto.PoliceStationDTO;
 import com.xworkz.electricity.repository.PoliceStationReository;
+import com.xworkz.electricity.util.ValidateUtil;
 
 public class PoliceStationServiceImpl implements PoliceStationService {
 
 	private PoliceStationReository repo;
 
+	private ValidateUtil<PoliceStationDTO> ref=new ValidateUtil<>();
 	public PoliceStationServiceImpl(PoliceStationReository repo) {
 		this.repo = repo;
 	}
@@ -25,14 +27,8 @@ public class PoliceStationServiceImpl implements PoliceStationService {
 		if (dto != null) {
 			System.out.println("Dto is not null");
 
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-			Set<ConstraintViolation<PoliceStationDTO>> validate = validator.validate(dto);
-
-			System.out.println("total constraints:" + " : " + validate.size());
-
-			validate.forEach(cv -> System.err.println(cv.getPropertyPath() + " " + cv.getMessage()));
-			if (validate.isEmpty()) {
+			
+			if (ref.validDTO(dto)) {
 
 				System.out.println("no contrainstsViolation found in: " + dto);
 

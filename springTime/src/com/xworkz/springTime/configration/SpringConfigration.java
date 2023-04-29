@@ -1,13 +1,13 @@
-package com.xworkz.horror.configration;
+package com.xworkz.springTime.configration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-
-//meta-data provides information to project
 @Configuration
-@ComponentScan("com.xworkz.horror")
+@ComponentScan("com.xworkz.springTime")
 public class SpringConfigration {
 
+
+	
 	
 }
