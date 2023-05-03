@@ -3,8 +3,6 @@ package com.xworkz.springTime.thing;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import com.xworkz.springTime.constant.Type;
-
 @Component
 public class Saloon {
 	

@@ -14,7 +14,7 @@ public class Chair {
 	public void setShape(String shape) {
 		this.shape = shape;
 	}
-	@Value("Costly")
+	 @Value("Costly")
 	private String type;
 	public void setType(String type) {
 		this.type = type;
