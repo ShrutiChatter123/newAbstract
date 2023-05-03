@@ -11,7 +11,7 @@ public class IceCreamRunner {
 	public static void main(String[] args) throws ClassNotFoundException {
 
 		try {
-			Connection connection = DriverManager.getConnection("jdbc://localhost:3306/jdbc", "root", "2AG19CV418");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_task", "root", "2AG19CV418");
 			String query = "select * from iceCreamDetails";
 			Statement st = connection.createStatement();
 			ResultSet result = st.executeQuery(query);
