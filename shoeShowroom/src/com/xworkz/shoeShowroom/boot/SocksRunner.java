@@ -16,7 +16,7 @@ public class SocksRunner {
 
 		SocksDTO dto = new SocksDTO(56, "Nike");
 
-		boolean save = service.ValidateAndSave(dto);
+		boolean save = service.validateAndSave(dto);
 		System.out.println("saving:" + save);
 	}
 }

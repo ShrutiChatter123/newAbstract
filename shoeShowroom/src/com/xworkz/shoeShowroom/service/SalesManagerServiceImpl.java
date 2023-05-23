@@ -20,7 +20,7 @@ public class SalesManagerServiceImpl implements SalesManagerService {
 	private Validator validator;
 
 	@Override
-	public boolean ValidateAndSave(SalesManagerDTO dto) {
+	public boolean validateAndSave(SalesManagerDTO dto) {
 		if (dto != null) {
 			System.out.println("dto is not null");
 			Set<ConstraintViolation<SalesManagerDTO>> violation = this.validator.validate(dto);

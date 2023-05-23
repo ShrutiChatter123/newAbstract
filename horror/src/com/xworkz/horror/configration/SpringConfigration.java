@@ -9,5 +9,4 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.xworkz.horror")
 public class SpringConfigration {
 
-	
 }

@@ -17,6 +17,10 @@ public class BarberRunner {
 
 		System.out.println(context.getBeanDefinitionCount());
 		System.out.println(context.getBean(Barber.class));
+		
+		
+			
 	}
 
 }
+

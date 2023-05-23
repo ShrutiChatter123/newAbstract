@@ -12,10 +12,10 @@ public class PolishRepositoryImpl implements PolishRepository {
 
 	private Collection<PolishDTO> polish=new ArrayList();
 	
-	public PolishRepositoryImpl(Collection<PolishDTO> polish) {
-		this.polish=polish;
-	}
-	
+//	public PolishRepositoryImpl(Collection<PolishDTO> polish) {
+//		this.polish=polish;
+//	}
+//	
 	PolishRepositoryImpl(){
 		System.out.println("Creating no-org constructor to the impl");
 	}
@@ -26,6 +26,9 @@ public class PolishRepositoryImpl implements PolishRepository {
 		System.out.println("Saving is correct");
 		return this.polish.add(dto);
 	}
+
+
+	
 
 	
 	

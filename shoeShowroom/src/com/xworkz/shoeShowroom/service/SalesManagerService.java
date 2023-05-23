@@ -4,7 +4,7 @@ import com.xworkz.shoeShowroom.dto.SalesManagerDTO;
 
 public interface SalesManagerService {
 
-	boolean ValidateAndSave(SalesManagerDTO dto);
+	boolean validateAndSave(SalesManagerDTO dto);
 	
 	
 	

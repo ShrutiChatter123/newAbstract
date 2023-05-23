@@ -16,7 +16,7 @@ public class SalesManagerRunner {
 
 		SalesManagerDTO dto = new SalesManagerDTO(21, "Varun");
 
-		boolean save = service.ValidateAndSave(dto);
+		boolean save = service.validateAndSave(dto);
 		System.out.println("saving :" + save);
 
 	}

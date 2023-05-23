@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import com.xworkz.shoeShowroom.dto.SocksDTO;
 import com.xworkz.shoeShowroom.repository.SocksRepository;
 
-import io.quarkus.hibernate.validator.runtime.jaxrs.QuarkusRestViolationExceptionMapper.ViolationReport.Violation;
 import lombok.AllArgsConstructor;
 
 @Component
@@ -21,7 +20,7 @@ public class SocksServiceImpl implements SocksService {
 	private Validator validator;
 
 	@Override
-	public boolean ValidateAndSave(SocksDTO dto) {
+	public boolean validateAndSave(SocksDTO dto) {
 
 		if (dto != null) {
 			System.out.println("dto is not null");

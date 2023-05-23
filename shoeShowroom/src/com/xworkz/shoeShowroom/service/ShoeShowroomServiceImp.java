@@ -1,20 +1,15 @@
 package com.xworkz.shoeShowroom.service;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Set;
 
 import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
 import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
 
 import org.springframework.stereotype.Component;
 
 import com.xworkz.shoeShowroom.dto.ShoeShowRoomDTO;
 import com.xworkz.shoeShowroom.repository.ShoeShowroomRepository;
 
-import io.quarkus.hibernate.validator.runtime.jaxrs.QuarkusRestViolationExceptionMapper.ViolationReport.Violation;
 import lombok.AllArgsConstructor;
 
 @Component

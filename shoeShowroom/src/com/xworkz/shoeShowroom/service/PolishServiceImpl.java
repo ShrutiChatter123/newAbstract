@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import com.xworkz.shoeShowroom.dto.PolishDTO;
 import com.xworkz.shoeShowroom.repository.PolishRepository;
 
-import io.quarkus.hibernate.validator.runtime.jaxrs.QuarkusRestViolationExceptionMapper.ViolationReport.Violation;
 import lombok.AllArgsConstructor;
 
 @Component
@@ -21,13 +20,14 @@ public class PolishServiceImpl implements PolishService {
 	private Validator validator;
 
 	@Override
-	public boolean ValidateAndSave(PolishDTO dto) {
+	public boolean validateAndSave(PolishDTO dto) {
 
 		System.out.println("Running validation in service:" + dto);
 
 		if (dto != null) {
 			System.out.println("dto is not null");
 
+//			violation empty edre mathra save agli annodakke ee line/
 			Set<ConstraintViolation<PolishDTO>> violations = this.validator.validate(dto);
 
 			if (!violations.isEmpty()) {

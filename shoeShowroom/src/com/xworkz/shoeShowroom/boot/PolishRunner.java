@@ -16,7 +16,7 @@ public class PolishRunner {
 
 		PolishDTO dto = new PolishDTO(20, "plain");
 
-		boolean save = service.ValidateAndSave(dto);
+		boolean save = service.validateAndSave(dto);
 		System.out.println("saving:" + save);
 
 	}

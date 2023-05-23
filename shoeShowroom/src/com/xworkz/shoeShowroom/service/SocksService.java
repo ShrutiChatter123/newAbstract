@@ -5,5 +5,5 @@ import com.xworkz.shoeShowroom.dto.SocksDTO;
 public interface SocksService {
 
 	
-	boolean ValidateAndSave(SocksDTO dto);
+	boolean validateAndSave(SocksDTO dto);
 }

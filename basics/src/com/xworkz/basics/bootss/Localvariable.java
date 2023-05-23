@@ -16,13 +16,13 @@ public class Localvariable {
 	
 	public static void main(String[] args) {
 		
-//		non static and localvariable;
-		String name ="shruti";
-		int age=22;
-		
-		System.out.println(name);
-		System.out.println(age);
-		
+////		non static and localvariable;
+//		String name ="shruti";
+//		int age=22;
+//		
+//		System.out.println(name);
+//		System.out.println(age);
+//		
 		
 		
 		System.out.println(Localvariable());
