@@ -30,7 +30,6 @@ public class AllSpringRunner {
 		@SuppressWarnings("resource")
 		ApplicationContext spring = new AnnotationConfigApplicationContext(SpringConfigration.class);
 		System.out.println(spring.getBeanDefinitionCount());
-
 		Stream.of(spring.getBeanDefinitionNames()).forEach(System.out::println);
 
 		System.out.println("---------------------------");
@@ -158,6 +157,7 @@ public class AllSpringRunner {
 		String name = func.FamilyFunction();
 		System.out.println(name);
 
+		
 		System.err.println("------------------------");
 		Journey jou = spring.getBean(Journey.class);
 		System.out.println(jou);
@@ -225,5 +225,8 @@ public class AllSpringRunner {
 		Set cls = spring.getBean("Exam", Set.class);
 		System.out.println("cls:" + cls);
 
+
+		
+		
 	}
 }

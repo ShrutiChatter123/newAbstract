@@ -41,6 +41,7 @@ public class Festival {
 	private String headGod;
 
 	public String culture() {
+		System.out.println("Calling culture..");
 		return "Indian";
 	}
 

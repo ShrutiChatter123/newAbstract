@@ -1,4 +1,5 @@
 import java.io.IOException;
+
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
@@ -57,8 +58,6 @@ public class Country extends HttpServlet {
 		vari.print("</h3>");
 
 		vari.print("</form>");
-
-//		vari.print("<a href='PmInfo.html'> Info For Pm</a>");
 		
 		vari.print("</body>");
 

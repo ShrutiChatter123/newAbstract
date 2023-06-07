@@ -4,13 +4,28 @@
 <workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1678949901345_1" label="Java Test Sources" name="Java Test Sources"/>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1682580181166_3" label="horror" name="horror"/>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1684309004048_4" label="ServerFile" name="ServerFile">
+<item elementID="=kaveriServerProject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=FirstScopeOfServlet" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Servers" type="4"/>
 <item elementID="=Luck" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Shruti" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=kaveriServerProject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=Raj" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SecondScopeOfServlet" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Shreenidhi" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=FirstScopeOfServlet" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=EntranceGetMethod" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=new-mvc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=JSPTask" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=reqScope" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Apple" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=cricket-team" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=transport" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ice-cream" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=simplecrudOnSpringMvc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=marriage" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=perfect-mvcform" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=resort" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=hospital" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=clintValidation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=bloodDonation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1678949917126_2" label="Window Working Set" name="Aggregate for window 1678949917126"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1684388563984_5" label="Window Working Set" name="Aggregate for window 1684388563984"/>

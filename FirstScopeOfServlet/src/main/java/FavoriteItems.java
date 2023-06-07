@@ -13,6 +13,8 @@ public class FavoriteItems extends HttpServlet {
 		System.out.println("Creating No-Org Constructor to FavoriteItems ");
 	}
 
+//	first scope of servlet is request scope
+	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println("Executing serviceMethod...");

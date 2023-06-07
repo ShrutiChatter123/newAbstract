@@ -12,6 +12,7 @@ public class Security {
 
 	private Thing thing;
 
+//	this is implicitly autowired
 	public Security(Thing thing) {
 		this.thing = thing;
 	}

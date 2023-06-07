@@ -30,6 +30,7 @@ public class FilmIndustry extends HttpServlet {
 	System.out.println("calling status...");
 	   RequestDispatcher dispacDispatcher= req.getRequestDispatcher("display.jsp");
 	   dispacDispatcher.forward(req, resp);
+
 	
 	}
 	
