@@ -2,6 +2,7 @@ package com.xworkz.dto;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -20,26 +21,22 @@ public class ClientDTO implements Serializable,Comparable<ClientDTO> {
 	private String officeName;
 	
 	@NotEmpty
-	@NotNull
 	@Size(min = 5,max =10 )
 	private String managerName;
 	@NotEmpty
-	@NotNull
 	@Size(min = 5,max =10 )
 
 	private String location;
 	@NotEmpty
-	@NotNull
 	@Size(min = 5,max =10 )
 
+	@Email( message = "please fill valid email")
 	private String email;
 	@NotEmpty
-	@NotNull
 	@Size(min = 5,max =10 )
 
 	private String subBranchLocation;
 	@NotEmpty
-	@NotNull
 	private String okForRegistraion;
 	
 	

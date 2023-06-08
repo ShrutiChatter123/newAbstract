@@ -47,7 +47,7 @@
 
 	<span style="color: green;">${msg}</span>
 
-	<c:forEach items="${errors}" var="error">
+	<c:forEach items="${errorMsg}" var="error">
 		<br>
 		<span style="color: red;">${error.defaultMessage}</span>
 		<br>

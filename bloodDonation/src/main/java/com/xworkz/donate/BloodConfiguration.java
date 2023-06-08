@@ -1,5 +1,6 @@
 package com.xworkz.donate;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.multipart.MultipartResolver;
@@ -30,6 +31,7 @@ public class BloodConfiguration implements WebMvcConfigurer {
 		registry.addViewController("/").setViewName("default");
 	}
 
+	@Bean
 	public MultipartResolver multipartResolver() {
 		return new StandardServletMultipartResolver();
 	}

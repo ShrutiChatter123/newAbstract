@@ -5,6 +5,8 @@ import javax.servlet.ServletRegistration.Dynamic;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import constants.ApplicationConstants;
+
 public class BloodWebinit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
@@ -29,7 +31,8 @@ public class BloodWebinit extends AbstractAnnotationConfigDispatcherServletIniti
 	
 	@Override
 	protected void customizeRegistration(Dynamic registration) {
-		int maxSize=800000000; MultipartConfigElement MultipartConfigElement=new MultipartConfigElement("C:\\Users\\tomcat-files\\SHRUTI CHATTER",maxSize,maxSize* 2,maxSize / 2 );
+		int maxSize=ApplicationConstants.MAX_SIZE;
+		MultipartConfigElement MultipartConfigElement=new MultipartConfigElement(ApplicationConstants.FILE_NAME,maxSize,maxSize* 2,maxSize / 2 );
 		registration.setMultipartConfig(MultipartConfigElement);
 			
 	}

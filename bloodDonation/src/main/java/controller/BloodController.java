@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.File;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -15,6 +16,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
+import constants.ApplicationConstants;
 import dto.BloodDonationDTO;
 
 @Component
@@ -33,6 +35,7 @@ public class BloodController {
 			List<ObjectError> error= bindingResult.getAllErrors();
 			error.forEach(e->System.out.println(e.getDefaultMessage()));
 			model.addAttribute("errors", error);
+			model.addAttribute("dtos", dto);
 			
 			
 		}else {
@@ -42,7 +45,7 @@ public class BloodController {
 			System.out.println("File Type"+file.getContentType());
 			System.out.println("File bytes"+file.getBytes());
 			System.out.println("data is valid"+dto);
-			File physicalFile=new File("C:\\Users\\tomcat-files\\SHRUTI CHATTER\\"+file.getOriginalFilename());
+			File physicalFile=new File( ApplicationConstants.ORIGINAL_FILE_NAME+file.getOriginalFilename());
 		
 			try(OutputStream os=new FileOutputStream(physicalFile)){
 				os.write(file.getBytes());
