@@ -39,7 +39,6 @@ public class ClientController {
 		
 		if(bindingResult.hasErrors()) {
 			System.out.println("data is invalid");
-
 			model.addAttribute("errorMsg", bindingResult.getAllErrors());
 			model.addAttribute("dto", dto);
 		}else {

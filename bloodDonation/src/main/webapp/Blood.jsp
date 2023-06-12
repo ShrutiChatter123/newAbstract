@@ -15,22 +15,33 @@
 	crossorigin="anonymous">
 
 </head>
+
+<a href="list"> table dislay</a>
 <div class="navbar navbar-dark bg-dark">
 	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">BloodDonation</a>
 		</div>
+		
+		<div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="ImageDisplay.jsp">view downoads</a>
+        </li>
+        </ul>
+        </div>
+		
 	</nav>
 </div>
 
 
-
-
 <body>
+<div align="center">
+
+
 	<h1>Enter your details hear.....</h1>
+	
 
-
-	<br>
 	<span style="color: green">${successMsg}</span>
 	<br>
 
@@ -84,13 +95,15 @@
 				type="text" class="form-control" id="weight" name="weight">
 		</div>
 
-	Gender:<div class="form-check"><br>
+	Gender: <br>
+		<label> male
+			</label>
 			<input value="male" class="form-check-input" type="radio"
 				name="gender" id="gender">
-			<label class="form-check-label" for="flexRadioDefault1"> male
-			</label>
-		</div>
-		<div class="form-check">
+		
+	
+		
+		<div>
 			<input value="female"   class="form-check-input" type="radio"
 				name="gender" id="gender"
 				checked> <label class="form-check-label"
@@ -101,7 +114,7 @@
 		<div class="form-check"><br>
 			<input value="yes"  class="form-check-input" type="radio"
 				name="haveyoudonatedpreviously" id="haveyoudonatedpreviously">
-			<label class="form-check-label" for="flexRadioDefault1">Yes
+			<label class="form-check-label" for="flexRadioDefault1">
 			</label>
 		</div>
 		<div class="form-check">
@@ -127,12 +140,14 @@
 	</form>
 
 
+
+
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous">
 		
 	</script>
-
+</div>
 </body>
 </html>

@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+
+form{
+	background: maroon;
+}
+
+
+body {
+	background: lightblue;
+	
+}
+
+#customer{
+	font-family:solid;
+	border-collapse: collapse;
+	width: 100px; 
+}

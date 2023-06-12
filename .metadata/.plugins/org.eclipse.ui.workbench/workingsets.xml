@@ -15,8 +15,8 @@
 <item elementID="=new-mvc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=JSPTask" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=reqScope" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=Apple" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
-<item elementID="=cricket-team" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Apple" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/cricket-team" type="4"/>
 <item elementID="=transport" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ice-cream" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=simplecrudOnSpringMvc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -26,10 +26,23 @@
 <item elementID="=hospital" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=clintValidation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=bloodDonation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=jpaCode" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=information-form" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=adhar_card" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1686311666298_7" label="JPA" name="JPA">
+<item elementID="=tomorrow" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=jpaMethods" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=jpaPractice" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1678949917126_2" label="Window Working Set" name="Aggregate for window 1678949917126"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1684388563984_5" label="Window Working Set" name="Aggregate for window 1684388563984"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1684389666862_6" label="Window Working Set" name="Aggregate for window 1684389666862"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1686311789553_8" label="Multiple Working Sets" name="Aggregate:JPA:ServerFile:">
+<workingSet IMemento.internal.id="JPA"/>
+<workingSet IMemento.internal.id="ServerFile"/>
+</workingSet>
 <mruList name="ServerFile"/>
+<mruList name="JPA"/>
 <mruList name="horror"/>
 </workingSetManager>
